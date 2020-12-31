@@ -9,10 +9,10 @@
   "scripts": {
     "start": "tsc -w",
     "release": "tsc && lerna publish",
-    "precommit": "lint-staged"
+    "precommit": "eslint packages --ext"
   },
   "lint-staged": {
-    "packages/**/*.{ts}": [
+    "packages/**/*.ts": [
       "prettier --write",
       "git add"
     ]
