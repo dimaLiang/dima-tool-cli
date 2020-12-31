@@ -9,10 +9,15 @@
   "scripts": {
     "start": "tsc -w",
     "release": "tsc && lerna publish",
-    "precommit": "eslint packages --ext"
+    "lint-staged": "lint-staged"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint-staged"
+    }
   },
   "lint-staged": {
-    "packages/**/*.ts": [
+    "packages/**/*.{ts}": [
       "prettier --write",
       "git add"
     ]
