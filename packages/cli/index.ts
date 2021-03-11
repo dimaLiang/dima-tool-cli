@@ -1,3 +1,7 @@
-console.log(11);
-console.log(22);
-console.log(33);
+const minimist = require('minimist');
+
+function main() {
+  console.log(minimist(process.argv.slice(2)));
+}
+
+main();
