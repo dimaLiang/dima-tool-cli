@@ -1,6 +1,5 @@
 # dima-tool-cli
 
-
-## web-project-cli
-
-## mobile-project-cli
+### TODO
+- [ ] app-creater
+- [ ] branch-merge
