@@ -1,5 +1,5 @@
 const minimist = require('minimist');
-const chalk = require('chalk');
+const { error } = require('@dima-toolbox/logger');
 
 main();
 
@@ -17,7 +17,7 @@ function getPlugin(pluginName: pluginName): Function {
   try {
     return require(`@dima-toolbox/${pluginName}`);
   } catch (err) {
-    console.log(chalk.red(`插件不存在，请执行命令【 yarn [global] add @dima-toolbox/${pluginName} 】安装插件`));
+    error(`插件不存在，请执行命令【 yarn [global] add @dima-toolbox/${pluginName} 】安装插件`);
     process.exit(1);
   }
 }
